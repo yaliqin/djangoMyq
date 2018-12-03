@@ -53,7 +53,7 @@ def check_door_status(request,email_info,liftmaster):
             else:
                 door_open_cnt[index] = 0
             if door_open_cnt[index] >= longTime:
-                url = "http://127.0.0.1:8000/myQ/confirm_set_door"
+                url = "http://192.168.1.35:8000/myQ/confirm_set_door"
                 send_mail(longTime,email_info.address,email_info.password,url)
                 global close_door_index
                 close_door_index= Const.doorName[door_info[index][1]]
