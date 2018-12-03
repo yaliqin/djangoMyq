@@ -37,7 +37,7 @@ def index(request):
 
 #  periodically monitor the door status,if door open time meet threshold, send email notification
 #  there is a confirm to close link in email, when click, it goes to confirm_set_door() method
-def check_door_status(request,email_info,liftmaster):
+def check_door_status(request):
     r= MyQAPI()
     r.usr=liftmaster.user
     r.pwd=liftmaster.pwd
@@ -65,7 +65,7 @@ def check_door_status(request,email_info,liftmaster):
 
 
 #  send email notification of opening door too long
-def confirm_set_door(request,liftmaster):
+def confirm_set_door(request):
     r= MyQAPI()
     r.usr=liftmaster.user
     r.pwd=liftmaster.pwd
