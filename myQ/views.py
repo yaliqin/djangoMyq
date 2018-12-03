@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from os import path
 import sys
 sys.path.append(path.abspath('/home/pi/python/myq_working'))
+sys.path.append(path.abspath('/home/pi/python/private'))
 # below are the methods defined in myq_working project
 from MyQAPI import MyQAPI
 from constants import Const
